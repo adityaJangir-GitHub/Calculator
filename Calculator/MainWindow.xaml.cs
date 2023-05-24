@@ -105,8 +105,8 @@ namespace Calculator
 
         private void decimalButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!resultLable.Content.ToString().Contains("."))       
-                resultLable.Content = $"{resultLable.Content}.";  
+            if (!resultLable.Content.ToString().Contains("."))
+                resultLable.Content = $"{resultLable.Content}.";
         }
     }
     public enum SelectedOperation
@@ -132,6 +132,10 @@ namespace Calculator
         }
         public static double Division(double firstnumber, double secondnumber)
         {
+            if (secondnumber == 0)
+                MessageBox.Show("Divide by zero is not supported", "Error message", MessageBoxButton.OK, MessageBoxImage.Error);
+            return 0;
+
             return firstnumber / secondnumber;
         }
     }
