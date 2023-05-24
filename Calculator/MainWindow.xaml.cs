@@ -93,13 +93,13 @@ namespace Calculator
             {
                 resultLable.Content = "0";
             }
-            if (sender == divisionOperationButton)
+            if (sender == divisionButton)
                 _selectedOperation = SelectedOperation.Division;
-            else if (sender == multiplyOperationButton)
+            else if (sender == multiplyButton)
                 _selectedOperation = SelectedOperation.Multiplication;
-            else if (sender == substractionOpeationButton)
+            else if (sender == substractionButton)
                 _selectedOperation = SelectedOperation.Substraction;
-            else if (sender == additionOperationButton)
+            else if (sender == additionButton)
                 _selectedOperation = SelectedOperation.Addition;
         }
 
